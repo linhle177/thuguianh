@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gửi bố nuôi mít 💕</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>💌 Gửi bố nuôi mít 💕</h1>
+
+        <!-- Envelope Image (Click to Open) -->
+        <div id="envelopeContainer">
+            <img id="closedEnvelope" src="images/envelope-closed.png" alt="Closed Envelope">
+            <img id="openEnvelope" src="images/envelope-open.png" alt="Open Envelope" class="hidden">
+        </div>
+
+        <!-- Love Letter (Initially Hidden) -->
+        <div id="letter" class="hidden">
+            <p class="letter">
+                Cảm ơn anh vì luôn ở bên em và yêu chiều em,<br><br>
+                Dạo này mình cũng không cãi nhau to nữa, em mong chúng mình luôn vì nhau, hiểu cho nhau và yêu thương nhau nhiều hơn. 
+                Có lẽ anh là điều tốt đẹp nhất mà 2024 đã gửi em để động viên em và thúc đẩy em trở nên tích cực, tốt đẹp hơn. 
+                Chắc là boyfriend effect ><. Mong em cũng có ảnh hưởng tích cực đến anh. 
+                ilysm anh ạ từ những cái nhỏ như í ẹ í ẹ khóc làm nũng anh hay những cái lớn hơn như suốt ngày bibabibo nói iu anh
+            </p>
+        </div>
+
+        <!-- Background Music Button -->
+        <audio id="backgroundMusic" loop>
+            <source src="music/your-favorite-song.mp3" type="audio/mpeg">
+        </audio>
+        <button id="playMusic">Bài hát khiến em nghĩ đến anh 🎶</button>
+
+        <!-- Valentine Proposal Button -->
+        <div class="valentine-container">
+            <button id="valentineButton">Will you be my Valentine and my forever? 💖</button>
+            <div id="valentineOptions" class="hidden">
+                <button id="yesButton">Yes em bé ợ 💖</button>
+                <button id="noButton" class="runaway">Hok anh ghét em 😡</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("valentineButton").addEventListener("mouseenter", function() {
+            document.getElementById("valentineOptions").classList.remove("hidden");
+        });
+
+        document.getElementById("noButton").addEventListener("mouseover", function() {
+            let noButton = document.getElementById("noButton");
+            let randomX = Math.random() * (window.innerWidth - 200);
+            let randomY = Math.random() * (window.innerHeight - 100);
+            noButton.style.position = "absolute";
+            noButton.style.left = randomX + "px";
+            noButton.style.top = randomY + "px";
+        });
+    </script>
+</body>
+</html>

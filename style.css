@@ -1,0 +1,133 @@
+/* Love Letter Website Styling */
+
+/* Đổi nền thành ảnh background.jpg */
+body {
+    background-image: url('images/background.jpg'); /* Sử dụng ảnh nền mới */
+    background-size: cover;  /* Ảnh sẽ che toàn bộ màn hình */
+    background-position: center; /* Căn giữa ảnh */
+    background-attachment: fixed; /* Giữ nguyên vị trí khi cuộn */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Căn giữa nội dung */
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tiêu đề */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Phong bì */
+#envelopeContainer {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Ảnh phong bì đóng và mở */
+#closedEnvelope, #openEnvelope {
+    width: 200px;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Ẩn phong bì mở lúc đầu */
+#openEnvelope {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+/* Lá thư */
+#letterContainer {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    width: 180px;
+    text-align: center;
+    transform: translateX(-50%) translateY(30px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    opacity: 0;
+}
+
+/* Ảnh lá thư */
+#letterImage {
+    width: 180px;
+}
+
+/* Chữ trong lá thư */
+#letterText {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 80%;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Khi phong bì mở ra, lá thư trượt lên */
+.envelopeOpened #openEnvelope {
+    opacity: 1;
+}
+
+.envelopeOpened #letterContainer {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-20px);
+}
+
+/* Khi lá thư xuất hiện, text dần hiện lên */
+.letterVisible #letterText {
+    opacity: 1;
+}
+
+/* Ẩn các phần tử ban đầu */
+.hidden {
+    display: none;
+}
+
+/* Button Styling */
+button {
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #ff1e4d;
+}
+
+/* Styling for the Valentine Button Options */
+.valentine-container {
+    margin-top: 20px;
+}
+
+#valentineOptions {
+    margin-top: 10px;
+}
+
+/* Make 'Hok anh ghét em 😡' button move away when hovered */
+.runaway {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
